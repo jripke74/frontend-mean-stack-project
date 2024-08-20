@@ -30,4 +30,8 @@ const Public = () => {
       </footer>
     </section>
   );
+
+  return content;
 };
+
+export default Public;
