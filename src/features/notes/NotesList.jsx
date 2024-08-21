@@ -1,5 +1,5 @@
 const NotesList = () => {
-  return <h1>NotesLisst</h1>;
+  return <h1>NotesList</h1>;
 };
 
 export default NotesList;
