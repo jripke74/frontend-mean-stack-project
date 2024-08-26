@@ -5,45 +5,39 @@
   <meta charset="UTF-8">
   <title>Our First Webpage</title>
   <link rel="shortcut icon" href="./img/favicon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
-    <h1>Mike's World</h1>
+  <header class="fixed-bar">
+    <h1 class="page-title">Mike's World</h1>
   </header>
   <nav>
-    <ul>
+    <ul class="navigation">
       <li>Home</li>
       <li><a href="contact/index.html">Contact</a></li>
     </ul>
   </nav>
   <main>
-    <ul>
-      <li>Home</li>
-      <li>
-        <p>My SF City Trip</p>
-        <div><img src="./img/sf.png" alt="Image of beach"></div>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <p>The California Landscape</p>
-        <div><img src="./img/california.png" alt="Walkway to beach">
-        </div>
-      </li>
-    </ul>
+    <div class="trip-text">
+      <p>My SF City Trip</p>
+      <p>The California Landscape</p>
+    </div>
+    <div class="trip-images">
+      <img src="./img/sf.png" alt="Image of beach">
+      <img src="./img/california.png" alt="Walkway to beach">
+    </div>
 
-
-    <p>Do pople like my page</p>
+    <p class="feedback">Do pople like my page</p>
   </main>
   <footer>
-    <div>
+    <div class="review-clients">
       <img src="./img/image-manu.png" alt="Image of Manu">
-      <span>Jeff - Awesome page, great work, keep it up!</span>
+      <p>Jeff - Awesome page, great work, keep it up!</p>
     </div>
-    <div>
+    <div class="review-clients">
       <img src="./img/image-max.png" alt="Image of Max">
-      <span>Manu - Looks really nice, beautiful pictures!</span>
+      <p>Manu - Looks really nice, beautiful pictures!</p>
     </div>
   </footer>
 </body>
