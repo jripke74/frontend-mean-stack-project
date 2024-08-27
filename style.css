@@ -13,9 +13,16 @@ a {
   color: #000;
 }
 
+a:active {
+  color: #fa923f;
+}
+
+img:hover {
+  cursor: pointer;
+}
+
 .fixed-bar {
   height: 70px;
-  font-size: 2rem;
 }
 
 /*header*/
