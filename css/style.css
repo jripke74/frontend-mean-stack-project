@@ -125,7 +125,7 @@ footer {
 /* || LARGE */
 @media screen and (min-width: 992px) {
   body {
-    background-color: firebrick;
+    background-color: #ce1313;
     background-image: radial-gradient(whitesmoke, firebrick);
   }
 }
