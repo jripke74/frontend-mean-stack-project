@@ -183,3 +183,76 @@ a:active {
     transform: skew(-10deg, -5deg) scaleY(1);
   }
 }
+
+/* || FOOTER */
+.footer {
+  position: sticky;
+  bottom: 0;
+  background-color: var(--HEADER-BGCOLOR);
+  color: var(--HEADER-COLOR);
+  padding: var(--PADDING-TB) var(--PADDING-SIDE);
+  text-align: center;
+}
+
+/* || MAIN */
+
+.main {
+  padding: var(--PADDING-TB) var(--PADDING-SIDE);
+}
+
+.main__article {
+  scroll-margin-top: 6.5rem;
+  margin: var(--MARGIN);
+}
+
+.main__article:first-child {
+  margin-top: 1em;
+}
+
+.main__article:last-child {
+  min-height: calc(100vh - 20rem);
+}
+
+/* || ABOUT */
+
+.about__trivia {
+  margin: var(--MARGIN);
+}
+
+.about__trivia-answer {
+  margin-top: 1rem;
+}
+
+/* || CONTACT */
+
+.contact__h2 {
+  margin: 0;
+}
+
+.contact__fieldset {
+  border: none;
+}
+
+.contact__p {
+  margin: 1em 0;
+}
+
+.contact__label {
+  display: block;
+  font-weight: bold;
+}
+
+.contact__input,
+.contact__textarea {
+  padding: 0.5rem;
+  border-radius: 15px;
+  border-width: 2px;
+  width: 100%;
+}
+
+.contact__button {
+  padding: 0.5em;
+  border-radius: 15px;
+  background-color: var(--HIGHLIGHT-COLOR);
+  color: var(--HEADER-COLOR);
+}
