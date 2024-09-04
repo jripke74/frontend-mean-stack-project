@@ -31,7 +31,7 @@ textarea {
   /* COLORS */
   --BGCOLOR: orange;
   --BGCOLOR-FADE: rgb(252, 220, 160);
-  --BGIMAGE: linear-gradient(to bottom, var(var(--BGCOLOR), var(var(var(--BGCOLOR-FADE)))));
+  --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR), var(--BGCOLOR-FADE));
   --BODY-BGCOLOR: #FFF;
   --FONT-COLOR: #000;
 }
@@ -48,4 +48,19 @@ textarea {
 
 .center {
   text-align: center;
+}
+
+/* || GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+  font-size: var(--FS);
+  font-family: var(--FF);
+  background-color: var(--BGCOLOR);
+  background-image: var(--BGIMAGE);
+}
+
+body {
+  background-color: var(--BODY-BGCOLOR);
+  color: var(--FONT-COLOR);
+  min-height: 100vh;
 }
