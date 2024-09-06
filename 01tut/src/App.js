@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Header from "./Header.jsx";
+import AddItem from "./AddItem.jsx";
 import Content from "./Content.jsx";
 import Footer from "./Footer.jsx";
 
@@ -22,6 +23,7 @@ function App() {
       item: "Item 3",
     },
   ]);
+  const [newItem, setNewItem] = useState("");
 
   const handleCheck = (id) => {
     const listItems = items.map((item) =>
@@ -37,9 +39,18 @@ function App() {
     localStorage.setItem("shippinglist", JSON.stringify(listItems));
   };
 
+  const handleSubmit = (e) => {
+    console.log("submitted");
+  };
+
   return (
     <div className="App">
       <Header title="Grocerie List" />
+      <AddItem
+        newItem={newItem}
+        setNewItem={setNewItem}
+        handleSubmit={handleSubmit}
+      />
       <Content
         items={items}
         handleCheck={handleCheck}
