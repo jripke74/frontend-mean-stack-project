@@ -40,7 +40,11 @@ function App() {
   };
 
   const handleSubmit = (e) => {
-    console.log("submitted");
+    e.preventDefault();
+    if (!newItem) return;
+    console.log(newItem);
+    // addItem
+    setNewItem("");
   };
 
   return (
