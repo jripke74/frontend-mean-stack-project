@@ -1,11 +1,6 @@
 {
   "items": [
     {
-      "id": 1,
-      "checked": false,
-      "item": "fruit"
-    },
-    {
       "id": 2,
       "checked": false,
       "item": "bananas"
@@ -14,6 +9,11 @@
       "id": 3,
       "checked": false,
       "item": "raisins"
+    },
+    {
+      "id": 4,
+      "checked": false,
+      "item": "kandy"
     }
   ]
 }
