@@ -40,19 +40,21 @@ function App() {
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
+  const handleDelete = (id) => {};
+
   return (
     <div className="App">
       <Header title="ReactJS Blog" />
       <Nav search={search} setSearch={setSearch} />
       <Switch>
         <Route exact path="/">
-          <Home />
+          <Home posts={posts} />
         </Route>
         <Route exact path="/post">
           <NewPost />
         </Route>
         <Route path="/post/:id">
-          <PostPage />
+          <PostPage posts={posts} handleDelete={handleDelete} />
         </Route>
         <Route path="/about" component={About} />
         <Route path="*" component={Missing} />
