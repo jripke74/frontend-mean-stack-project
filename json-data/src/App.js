@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import Form from "./Form.jsx";
+import Table from "./Table.jsx";
 import List from "./List.jsx";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
     <div className="App">
       <Form reqType={reqType} setReqType={setReqType} />
       {/* <List items={items} /> */}
+      <Table items={items} />
     </div>
   );
 }
