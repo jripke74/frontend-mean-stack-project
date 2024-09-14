@@ -52,7 +52,7 @@ body {
   font-size: 1.5rem;
 }
 
-.header svg {
+.Header svg {
   font-size: 2rem;
 }
 
@@ -223,7 +223,7 @@ body {
   cursor: pointer;
 }
 
-.startusMsg {
+.statusMsg {
   margin-top: 2rem;
 }
 
