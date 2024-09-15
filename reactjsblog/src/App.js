@@ -2,6 +2,7 @@ import { Route, Switch, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
 
+import api from "./api/posts.js";
 import Header from "./Header.jsx";
 import Nav from "./Nav.jsx";
 import Footer from "./Footer.jsx";
@@ -18,6 +19,25 @@ function App() {
   const [postTitle, setPostTitle] = useState("");
   const [postBody, setPostBody] = useState("");
   const history = useHistory();
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await api.get("/posts");
+        setPosts(response.data);
+      } catch (err) {
+        if (err.response) {
+          // Not in the 200 response range
+          console.log(err.response.data);
+          console.log(err.response.status);
+          console.log(err.response.headers);
+        } else {
+          console.log(`Error: ${err.message}`);
+        }
+      }
+    };
+    fetchPosts();
+  }, []);
 
   useEffect(() => {
     const filteredResults = posts.filter(
