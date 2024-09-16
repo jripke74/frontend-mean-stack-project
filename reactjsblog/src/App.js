@@ -9,6 +9,7 @@ import Footer from "./Footer.jsx";
 import Home from "./Home.jsx";
 import NewPost from "./NewPost.jsx";
 import PostPage from "./PostPage.jsx";
+import EditPost from "./EditPost.jsx";
 import About from "./About.jsx";
 import Missing from "./Missing.jsx";
 
@@ -110,6 +111,16 @@ function App() {
             setPostTitle={setPostTitle}
             postBody={postBody}
             setPostBody={setPostBody}
+          />
+        </Route>
+        <Route path="/edit/:id">
+          <EditPost
+            posts={posts}
+            handleEDit={handleEdit}
+            editTitle={editTitle}
+            setEditTitle={setEditTitle}
+            editBody={editBody}
+            setEditBody={setEditBody}
           />
         </Route>
         <Route path="/post/:id">

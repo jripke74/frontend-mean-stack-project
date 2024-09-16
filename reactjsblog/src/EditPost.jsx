@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import { useParams, link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const EditPost = ({
-  post,
+  posts,
   handleEdit,
   editBody,
   setEditBody,
@@ -20,25 +20,40 @@ const EditPost = ({
   }, [post, setEditTitle, setEditBody]);
   return (
     <main className="NewPost">
-      <h2>New Post</h2>
-      <form className="newPostForm" onSubmit={handleSubmit}>
-        <label htmlFor="postTitle">Title:</label>
-        <input
-          id="postTitle"
-          type="text"
-          required
-          value={postTitle}
-          onChange={(e) => setPostTitle(e.target.value)}
-        />
-        <label htmlFor="postBody">Post:</label>
-        <textarea
-          id="postBody"
-          required
-          value={postBody}
-          onChange={(e) => setPostBody(e.target.value)}
-        />
-        <button type="submit">Submit</button>
-      </form>
+      {editTitle && (
+        <>
+          <h2>New Post</h2>
+          <form className="newPostForm" onSubmit={(e) => e.preventDefault()}>
+            <label htmlFor="postTitle">Title:</label>
+            <input
+              id="postTitle"
+              type="text"
+              required
+              value={editTitle}
+              onChange={(e) => setEditTitle(e.target.value)}
+            />
+            <label htmlFor="postBody">Post:</label>
+            <textarea
+              id="postBody"
+              required
+              value={editBody}
+              onChange={(e) => setEditBody(e.target.value)}
+            />
+            <button type="submit" onClick={() => handleEdit(post.id)}>
+              Submit
+            </button>
+          </form>
+        </>
+      )}
+      {!editTitle && (
+        <>
+          <h2>Post Not Found</h2>
+          <p>Well, that's disappointing.</p>
+          <p>
+            <Link to="/">Visit Our Homepage</Link>
+          </p>
+        </>
+      )}
     </main>
   );
 };
