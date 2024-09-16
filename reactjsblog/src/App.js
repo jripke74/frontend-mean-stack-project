@@ -13,6 +13,7 @@ import EditPost from "./EditPost.jsx";
 import About from "./About.jsx";
 import Missing from "./Missing.jsx";
 import useWindowSize from "./hooks/useWindowSize.js";
+import useAxiosFetch from "./hooks/useAxiosFetch.js";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -24,6 +25,8 @@ function App() {
   const [editBody, setEditBody] = useState("");
   const history = useHistory();
   const { width } = useWindowSize();
+
+  const { data, fetchError, isLoading } = useAxiosFetch();
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -58,7 +61,7 @@ function App() {
     const id = posts.length ? posts[posts.length - 1].id + 1 : 1;
     const datetime = format(new Date(), "MMMM dd, yyyy pp");
     const newPost = { id, title: postTitle, datetime, body: postBody };
-    const allPosts = [...posts, newPost];
+    // const allPosts = [...posts, newPost];
     try {
       const response = await api.post("/posts", newPost);
       const allPosts = [...posts, response.data];
