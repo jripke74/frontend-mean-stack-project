@@ -12,6 +12,7 @@ import PostPage from "./PostPage.jsx";
 import EditPost from "./EditPost.jsx";
 import About from "./About.jsx";
 import Missing from "./Missing.jsx";
+import useWindowSize from "./hooks/useWindowSize.js";
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -22,6 +23,7 @@ function App() {
   const [editTitle, setEditTitle] = useState("");
   const [editBody, setEditBody] = useState("");
   const history = useHistory();
+  const { width } = useWindowSize();
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -98,7 +100,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header title="ReactJS Blog" />
+      <Header title="ReactJS Blog" width={width} />
       <Nav search={search} setSearch={setSearch} />
       <Switch>
         <Route exact path="/">
