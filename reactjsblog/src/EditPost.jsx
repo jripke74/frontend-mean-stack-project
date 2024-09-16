@@ -14,7 +14,7 @@ const EditPost = ({
 
   useEffect(() => {
     if (post) {
-      setEditTitle(post.titel);
+      setEditTitle(post.title);
       setEditBody(post.body);
     }
   }, [post, setEditTitle, setEditBody]);

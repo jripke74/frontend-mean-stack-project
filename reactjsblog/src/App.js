@@ -116,7 +116,7 @@ function App() {
         <Route path="/edit/:id">
           <EditPost
             posts={posts}
-            handleEDit={handleEdit}
+            handleEdit={handleEdit}
             editTitle={editTitle}
             setEditTitle={setEditTitle}
             editBody={editBody}
