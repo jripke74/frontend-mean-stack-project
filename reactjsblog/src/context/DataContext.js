@@ -2,7 +2,6 @@ import { useHistory } from "react-router-dom";
 import { createContext, useState, useEffect } from "react";
 import { format } from "date-fns";
 import api from "../api/posts.js";
-import useWindowSize from "../hooks/useWindowSize.js";
 import useAxiosFetch from "../hooks/useAxiosFetch.js";
 
 const DataContext = createContext({});
@@ -11,12 +10,9 @@ export const DataProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-  const [postTitle, setPostTitle] = useState("");
-  const [postBody, setPostBody] = useState("");
   const [editTitle, setEditTitle] = useState("");
   const [editBody, setEditBody] = useState("");
   const history = useHistory();
-  const { width } = useWindowSize();
 
   const { data, fetchError, isLoading } = useAxiosFetch(
     "http://localhost:3500/posts"
@@ -34,24 +30,6 @@ export const DataProvider = ({ children }) => {
     );
     setSearchResults(filteredResults.reverse());
   }, [posts, search]);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const id = posts.length ? posts[posts.length - 1].id + 1 : 1;
-    const datetime = format(new Date(), "MMMM dd, yyyy pp");
-    const newPost = { id, title: postTitle, datetime, body: postBody };
-    // const allPosts = [...posts, newPost];
-    try {
-      const response = await api.post("/posts", newPost);
-      const allPosts = [...posts, response.data];
-      setPosts(allPosts);
-      setPostTitle("");
-      setPostBody("");
-      history.push("/");
-    } catch (err) {
-      console.log(`Error: ${err.message}`);
-    }
-  };
 
   const handleDelete = async (id) => {
     try {
@@ -83,18 +61,13 @@ export const DataProvider = ({ children }) => {
   return (
     <DataContext.Provider
       value={{
-        width,
         search,
         setSearch,
         searchResults,
         fetchError,
         isLoading,
-        handleSubmit,
-        postTitle,
-        setPostTitle,
-        postBody,
-        setPostBody,
         posts,
+        setPosts,
         handleEdit,
         editBody,
         setEditBody,
