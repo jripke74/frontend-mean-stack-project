@@ -8,7 +8,7 @@ const useAxiosFetch = (dataUrl) => {
 
   useEffect(() => {
     let isMounted = true;
-    const source = axios.concelToken.source();
+    const source = axios.CancelToken.source();
 
     const fetchData = async (url) => {
       setIsLoading(true);
@@ -22,18 +22,17 @@ const useAxiosFetch = (dataUrl) => {
         }
       } catch (err) {
         if (isMounted) {
-          setFetchError(err.message);
+          setFetchError("Network Error");
           setData([]);
         }
       } finally {
-        isMounted && setTimeout(() => setIsLoading(false), 2000);
+        isMounted && setIsLoading(false);
       }
     };
 
     fetchData(dataUrl);
 
     const cleanUp = () => {
-      console.log("clean up function");
       isMounted = false;
       source.cancel();
     };
