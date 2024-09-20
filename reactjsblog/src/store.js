@@ -45,8 +45,8 @@ export default createStore({
       console.log(`Error: ${err.message}`);
     }
   }),
-  deletePost: thunk(async (actions, id, hekpers) => {
-    const { posts } = helpsers.getState();
+  deletePost: thunk(async (actions, id, helpers) => {
+    const { posts } = helpers.getState();
     try {
       await api.delete(`/posts/${id}`);
       setPosts(posts.filter((post) => post.id !== id));
