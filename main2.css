@@ -7,9 +7,7 @@ body {
 }
 
 a {
-  text-decoration: none;
-  cursor: pointer;
-  color: blue;
+  color: #000;
 }
 
 a:visited {
@@ -23,4 +21,23 @@ a:focus {
 
 a:active {
   color: red;
+}
+
+ol {
+  list-style-type: none;
+  padding: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  border-top: 1px solid #333;
+}
+
+li a,
+li a:visited {
+  text-decoration: none;
+  color: #333;
 }
