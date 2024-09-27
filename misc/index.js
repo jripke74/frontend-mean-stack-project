@@ -1,47 +1,7 @@
-// let saveEl = document.getElementById("save-el");
-// let countEl = document.getElementById("count-el");
-// let count = 0;
+// 1. Create two variables, firstCard and secondCard.
+// Set their values to a random number between 2-11
+let firstCard = 4;
+let secondCard = 8;
 
-// function increment() {
-//   count += 1;
-//   countEl.textContent = count;
-// }
-
-// function save() {
-//   let countStr = count + " - ";
-//   saveEl.textContent += countStr;
-//   count = 0;
-//   countEl.textContent = 0;
-
-let num1 = 8;
-let num2 = 2;
-document.getElementById("num1-el").textContent = num1;
-document.getElementById("num2-el").textContent = num2;
-let sumEl = document.getElementById("sum-el");
-
-// Create four functions: add(), subtract(), divide(), multiply()
-// Call the correct function when the user clicks on one of the buttons
-// Perform the given calculation using num1 and num2
-// Render the result of the calculation in the paragraph with id="sum-el"
-function add() {
-  let result = num1 + num2;
-  sumEl.textContent = "Sum: " + result;
-}
-
-function subtract() {
-  let result = num1 - num2;
-  sumEl.textContent = "Difference: " + result;
-}
-
-function divide() {
-  let result = num1 / num2;
-  sumEl.textContent = "Quotient: " + result;
-}
-
-function multiply() {
-  let result = num1 * num2;
-  sumEl.textContent = "Product: " + result;
-}
-
-// E.g. if the user clicks on the "Plus" button, you should render
-// "Sum: 10" (since 8 + 2 = 10) inside the paragraph with id="sum-el"
+// 2. Create a variable, sum, and set it to the sum of the two cards
+let sum = firstCard + secondCard;
