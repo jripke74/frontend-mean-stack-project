@@ -44,4 +44,33 @@ a {
 input {
   display: block;
   margin: 20px 0 0;
+  width: 160px;
+  box-sizing: border-box;
+  padding: 4px 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--text);
+  color: var(--text);
+  background: none;
+  border-radius: var(--image);
+  font-family: var(--font);
+}
+
+::placeholder {
+  color: var(--text);
+}
+
+button {
+  border-radius: var(--image);
+  padding: 5px 10px;
+  border: none;
+  background: var(--text);
+  color: var(--background);
+  font-weight: bold;
+  box-sizing: border-box;
+  display: block;
+  margin: 8px 0;
+  cursor: pointer;
+  font-family: var(--font);
+  width: 160px;
 }
