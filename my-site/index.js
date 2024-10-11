@@ -1,14 +1,14 @@
 // Challenge 2:
 // Replace the argument below according to your preference.
 
-// space, scary, military, romantic, cowboy, fantasy, superhero
-favouriteMovieGenre("military");
+// grey, space, scary, military, romantic, cowboy, fantasy, superhero
+favouriteMovieGenre("");
 
 // watermelon, tomato, banana, orange, avocado, blueberry
-favouriteFruit("avocado");
+favouriteFruit();
 
 // light, dark
-favouriteMode("dark");
+favouriteMode("light");
 
 // sharp, soft, round
 favouriteEdgeStyle("round");
@@ -34,7 +34,7 @@ function favouriteMovieGenre(font) {
 function favouriteMode(mode) {
   if (mode === "light" || !mode) {
     setProp("--background", "var(--light)");
-    setProp("--text", "var(--dark");
+    setProp("--text", "var(--dark)");
   } else if (mode === "dark") {
     setProp("--background", "var(--dark)");
     setProp("--text", "var(--light)");
@@ -79,7 +79,7 @@ function favouriteFruit(theme) {
     setProp("--light", "#41a8f9");
     setProp("--dark", "#064490");
   } else {
-    setProp("--light", "f5f5f5");
-    setProp("--dark", "#222222");
+    setProp("--light", "#EBEBEB");
+    setProp("--dark", "black");
   }
 }
