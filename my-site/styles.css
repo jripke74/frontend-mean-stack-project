@@ -1,4 +1,10 @@
+@font-face {
+  src: url("Monocode-Regular-V01-02b.tff");
+  font-family: "Monocode";
+}
+
 :root {
+  --monocode: "Monocode";
   --superhero: "Bangers", cursive;
   --fantasy: "MedievalSharp", cursive;
   --space: sans-serif;

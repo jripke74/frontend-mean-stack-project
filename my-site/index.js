@@ -2,7 +2,7 @@
 // Replace the argument below according to your preference.
 
 // grey, space, scary, military, romantic, cowboy, fantasy, superhero
-favouriteMovieGenre("");
+favouriteMovieGenre("monocode");
 
 // watermelon, tomato, banana, orange, avocado, blueberry
 favouriteFruit();
