@@ -45,7 +45,8 @@ img {
 }
 
 a {
-  color: var(--text);
+  color: blue;
+  text-decoration: none;
 }
 
 input {
