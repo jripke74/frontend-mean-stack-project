@@ -79,7 +79,7 @@ function favouriteFruit(theme) {
     setProp("--light", "#41a8f9");
     setProp("--dark", "#064490");
   } else {
-    setProp("--light", "#EBEBEB");
+    setProp("--light", "#EBEBEA");
     setProp("--dark", "black");
   }
 }
