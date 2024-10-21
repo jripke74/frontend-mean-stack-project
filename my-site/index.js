@@ -101,3 +101,5 @@ function save() {
   countEl.textContent = count;
   count = 0;
 }
+
+let randomNumber = Math.random();
